@@ -1,0 +1,50 @@
+{
+  "name": "backstopjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "config": {
+    "BACKSTOP_DIR": "./src/backstopjs"
+  },
+
+  "scripts": {
+    "back_ref": "cross-env backstop reference --filter=$npm_config_filter --config=$npm_package_config_BACKSTOP_DIR/backstopConfig.js",
+    "back_test": "cross-env backstop test --filter=$npm_config_filter --config=$npm_package_config_BACKSTOP_DIR/backstopConfig.js ",
+    "back_approve": "cross-env backstop approve --filter=$npm_config_filter --config=$npm_package_config_BACKSTOP_DIR/backstopConfig.js"
+  },
+  "dependencies": {
+    "cli-color": "^1.4.0",
+    "cross-env": "^6.0.3",
+    "dotenv": "^8.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "browserify": "^16.2.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/env",
+        {
+          "targets": {
+            "ie": 11
+          },
+          "forceAllTransforms": false
+        }
+      ]
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/bearshit/backstop-test.git"
+  },
+  "author": "R.Zhukov",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://gitlab.com/bearshit/backstop-test/issues"
+  },
+  "homepage": "https://gitlab.com/bearshit/backstop-test#README"
+}
