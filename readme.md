@@ -2,6 +2,7 @@
 
 ![node](https://img.shields.io/badge/node-8.10.0-blue)
 ![npm](https://img.shields.io/badge/npm-6.4.1-reg)
+![puppeteer](https://img.shields.io/badge/puppeteer-1.20.0-orange)
 
 BackstopJS automates visual regression testing of your responsive web UI by comparing DOM screenshots over time.
 
