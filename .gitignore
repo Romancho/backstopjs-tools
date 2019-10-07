@@ -6,3 +6,4 @@ backstop_data/bitmaps_test
 .env
 vendor
 node_modules
+/npm-debug.log
