@@ -1,5 +1,6 @@
 module.exports = [
         '.banner',
+        '.regressive_image',
         '.billboard',
         '#inreadvideo',
         '.inreadvideo',
