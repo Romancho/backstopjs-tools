@@ -1,7 +1,11 @@
-const similarScenarios = require('./tests/similarScenarios.js');
-const separatedScenarios = require('./tests/separatedScenarios.js');
-
-const scenarios = separatedScenarios.concat(similarScenarios);
+const fs = require('fs');
+var scenarios = null;
+let configData = fs.readFileSync('./config.json');
+let base = JSON.parse(configData);
+console.log('Module: ' + base.module);
+if (!base.module.hasOwnProperty() || base.module !== false) {
+    scenarios = require(base.module);
+}
 
 module.exports = {
     "id": "backstop-tools",
