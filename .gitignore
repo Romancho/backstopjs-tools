@@ -3,6 +3,7 @@
 .htpasswd
 backstop_data/bitmaps_reference
 backstop_data/bitmaps_test
+backstop_data/html_report
 .env
 vendor
 node_modules
