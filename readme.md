@@ -11,23 +11,36 @@ BackstopJS automates visual regression testing of your responsive web UI by comp
 ___________________________________________
 
 ## Установка и настройка backstopjs
-1. В корне проекта выполняем:
+1. Если не стоит **backstopjs**, нужно поставить backstopjs глобально (в зависимости от ОС c `sudo` или без):
+```bash
+$ npm config set user 0
+$ npm config set unsafe-perm true
+$ npm install -g backstopjs
+```
+2. В корне проекта выполняем:
 ```bash
 $ npm i
 ```
 
-2. Скопировать переменные `BACKSTOP_*` из *.env.default* в *.env* и проставить свои значения:
+3. Скопировать переменные `BACKSTOP_*` из *.env.default* в *.env* и проставить свои значения:
 ```
+BACKSTOP_BASE_AUTH:             = false
+BACKSTOP_BASE_LOGIN:            = %login%
+BACKSTOP_BASE_PASSWORD:         = %password%
 BACKSTOP_DEBUG              = true # переменная только для работы BackstopJS (например скрывает баннеры)
 BACKSTOP_REFERENCE_URL      = https://SITE_URL # Сайт-эталон
 BACKSTOP_TESTING_URL        = http://DEV_SITE_URL # Тестируемый сайт
 ```
 
 3. Конфиги
+Предустановленные конфиги лежат в частном репозитории, в котором необходимо авторизоваться через консоль.
 
-Файлы конфигов лежат в `./src/backstopjs/`
+Далее в config.json правим название подключаемого модуля и делаем:
 
-Кастомизация puppeter и chromy - `backstop_data/engine_scripts/`
+```bash
+$ npm i bs-название проекта
+```
+
 
 --------------------------------------------------------------
 ## Команды
@@ -81,3 +94,11 @@ $ npm run back_approve --filter=scenario_name
 
     some_page,
     some_page2
+-----------------------------------------------------
+## Troubleshooting
+Если не ставится Chromium, делаем:
+```bash
+$ npm config set user 0
+$ npm config set unsafe-perm true
+$ npm install -g backstopjs
+```
