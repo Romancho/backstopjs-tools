@@ -1,6 +1,6 @@
 const fs = require('fs');
 var scenarios = null;
-let configData = fs.readFileSync('./src/backstopjs/config.json');
+let configData = fs.readFileSync('./config.json');
 let base = JSON.parse(configData);
 console.log('Module: ' + base.module);
 if (!base.module.hasOwnProperty() || base.module !== false) {
