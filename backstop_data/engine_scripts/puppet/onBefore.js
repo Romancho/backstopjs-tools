@@ -1,13 +1,14 @@
-const puppeteer = require('puppeteer');
+const fs = require('fs');
+const path = require('path');
+let configData = fs.readFileSync(path.resolve(__dirname, '../../../config.json'));
+let config = JSON.parse(configData);
 var clc = require("cli-color");
-const btoa = function (str) {
-    return new Buffer(str).toString('base64')
-};
 
 module.exports = async (page, scenario, vp) => {
-    console.log(process.env.BACKSTOP_BASE_AUTH);
-    if(process.env.BACKSTOP_BASE_AUTH === "true") {
-        await page.authenticate({username: process.env.BACKSTOP_BASE_LOGIN, password: process.env.BACKSTOP_BASE_PASSWORD});
+    //console.log(config.baseAuth);
+    if(config.baseAuth === true) {
+        await page.authenticate({username: config.login, password: config.password});
+        //console.log(config.login, config.password);
     }
 
     if(vp.label === "mobile") {

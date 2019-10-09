@@ -1,14 +1,13 @@
 const fs = require('fs');
 var scenarios = null;
 let configData = fs.readFileSync('./config.json');
-let base = JSON.parse(configData);
-console.log('Module: ' + base.module);
-if (!base.module.hasOwnProperty() || base.module !== false) {
-    scenarios = require(base.module);
+let config = JSON.parse(configData);
+console.log('Module: ' + config.module);
+if (!config.module.hasOwnProperty() || config.module !== false) {
+    scenarios = require(config.module);
 }
-
 module.exports = {
-    "id": "backstop-tools",
+    "id": config.module,
     "viewports": [{
     "label": "mobile",
     "width": 300,
