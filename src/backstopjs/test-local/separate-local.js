@@ -20,8 +20,28 @@ const social = {
     'hideSelectors': []
 };
 
+const authPop = {
+    'label': 'authPop',
+    'cookiePath': cookieFile,
+    'url': urlTesting,
+    'referenceUrl': urlReference,
+    'readyEvent': '',
+    'readySelector': '',
+    'delay': 3000,
+    'removeSelectors': [],
+    'hoverSelector': '',
+    'clickSelector': [
+        '.btn-menu'
+    ],
+    'selectors' : [
+        '.main-header'
+    ],
+    'hideSelectors': []
+};
+
 const scenarios = [
-    social
+    social,
+    authPop
 ];
 
 const basicTestSettings = {
