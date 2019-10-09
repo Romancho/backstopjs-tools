@@ -2,16 +2,17 @@ const fs = require('fs');
 const scenariosSimilarLocal = require('./test-local/similar-local');
 const scenariosSeparateLocal = require('./test-local/separate-local');
 var scenarios = scenariosSeparateLocal.concat(scenariosSimilarLocal);
-
+let project = "Backstop-tools";
 let configData = fs.readFileSync('./config.json');
 let config = JSON.parse(configData);
 console.log('Module: ' + config.module);
 if (!config.module.hasOwnProperty() || config.module !== false) {
     let scenariosExternal = require(config.module);
     scenarios = scenariosExternal.concat(scenarios);
+    project = config.module;
 }
 module.exports = {
-    "id": config.module,
+    "id": project,
     "viewports": [{
     "label": "mobile",
     "width": 300,
