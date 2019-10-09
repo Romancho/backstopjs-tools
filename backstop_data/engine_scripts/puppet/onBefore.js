@@ -1,17 +1,13 @@
+const puppeteer = require('puppeteer');
 var clc = require("cli-color");
-require('dotenv').config({path: '.env'});
 const btoa = function (str) {
     return new Buffer(str).toString('base64')
 };
 
 module.exports = async (page, scenario, vp) => {
-    if(process.env.BACKSTOP_BASE_AUTH === true) {
-        const authHeader = btoa(process.env.BACKSTOP_BASE_LOGIN + ':' + process.env.BACKSTOP_BASE_PASSWORD);
-        puppet.userAgent(vp.userAgent);
-        puppet.headers({
-            'Authorization': 'Basic ' + authHeader
-        });
-        puppet.ignoreCertificateErrors();
+    console.log(process.env.BACKSTOP_BASE_AUTH);
+    if(process.env.BACKSTOP_BASE_AUTH === "true") {
+        await page.authenticate({username: process.env.BACKSTOP_BASE_LOGIN, password: process.env.BACKSTOP_BASE_PASSWORD});
     }
 
     if(vp.label === "mobile") {

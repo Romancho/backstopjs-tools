@@ -45,7 +45,7 @@ module.exports = {
     "report": ["CLI","browser"],
     "engine": "puppeteer",
     "engineOptions": {
-        "ignoreHTTPSErrors": false,
+        "ignoreHTTPSErrors": true,
         "args": [
             "--disable-setuid-sandbox",
             "--no-first-run",
