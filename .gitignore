@@ -8,4 +8,4 @@ backstop_data/html_report
 vendor
 node_modules
 /npm-debug.log
-test.config.json
+config.json

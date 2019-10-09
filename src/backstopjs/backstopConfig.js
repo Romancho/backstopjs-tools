@@ -1,10 +1,14 @@
 const fs = require('fs');
-var scenarios = null;
+const scenariosSimilarLocal = require('./test-local/similar-local');
+const scenariosSeparateLocal = require('./test-local/separate-local');
+var scenarios = scenariosSeparateLocal.concat(scenariosSimilarLocal);
+
 let configData = fs.readFileSync('./config.json');
 let config = JSON.parse(configData);
 console.log('Module: ' + config.module);
 if (!config.module.hasOwnProperty() || config.module !== false) {
-    scenarios = require(config.module);
+    let scenariosExternal = require(config.module);
+    scenarios = scenariosExternal.concat(scenarios);
 }
 module.exports = {
     "id": config.module,
