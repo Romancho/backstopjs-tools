@@ -5,12 +5,12 @@ var scenarios = scenariosSeparateLocal.concat(scenariosSimilarLocal);
 let project = "Backstop-tools";
 let configData = fs.readFileSync('./config.json');
 let config = JSON.parse(configData);
-console.log('Module: ' + config.module);
-if (!config.module.hasOwnProperty() || config.module !== false) {
+if (config.module  !== "") {
     let scenariosExternal = require(config.module);
     scenarios = scenariosExternal.concat(scenarios);
     project = config.module;
 }
+console.log('Module: ' + project);
 module.exports = {
     "id": project,
     "viewports": [{
