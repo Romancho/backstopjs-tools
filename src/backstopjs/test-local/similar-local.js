@@ -1,18 +1,10 @@
 const path = require('path');
 const urls = require(path.resolve(__dirname, '../backstopUrls-local'));
+let breakpoints = require('../backstopViewports-local');
 let [urlReference, urlTesting, cookieFile] = urls;
 const reference_exeption = require(path.resolve(__dirname, '../backstopExeption-local'));
 
-const social = {
-    'label': '_empty_',
-    'removeSelectors': [
-        '_empty_',
-        reference_exeption
-    ],
-    'selectors' : [
-        '_empty_'
-    ],
-};
+const social = {};
 
 const basicTestSettings = {
     referenceUrl: urlReference,
@@ -33,7 +25,7 @@ const basicTestSettings = {
 
 
 const scenarios = [
-    social
+    //social
 ];
 
 function addBasicTestSettings(scenarios) {

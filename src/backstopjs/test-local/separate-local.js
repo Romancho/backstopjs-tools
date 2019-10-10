@@ -1,6 +1,8 @@
 const path = require('path');
 const urls = require(path.resolve(__dirname, '../backstopUrls-local'));
 let [urlReference, urlTesting, cookieFile] = urls;
+let breakpoints = require('../backstopViewports-local');
+
 const reference_exeption = require(path.resolve(__dirname, '../backstopExeption-local'));
 
 const social = {
@@ -19,16 +21,8 @@ const social = {
     ],
     'hideSelectors': [],
     'viewports': [
-        {
-            "label": "ipad",
-            "width": 990,
-            "height": 1366
-        },
-        {
-            "label": "large screen",
-            "width": 1320,
-            "height": 1200
-        }
+        breakpoints.ipad,
+        breakpoints.desktop
     ]
 };
 
@@ -48,7 +42,11 @@ const authPop = {
     'selectors' : [
         '.main-header'
     ],
-    'hideSelectors': []
+    'hideSelectors': [],
+    'viewports': [
+        breakpoints.ipad,
+        breakpoints.desktop
+    ]
 };
 
 const scenarios = [

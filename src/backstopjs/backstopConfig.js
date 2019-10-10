@@ -1,4 +1,5 @@
 const fs = require('fs');
+let breakpoints = require('./backstopViewports-local');
 const scenariosSimilarLocal = require('./test-local/similar-local');
 const scenariosSeparateLocal = require('./test-local/separate-local');
 var scenarios = scenariosSeparateLocal.concat(scenariosSimilarLocal);
@@ -13,26 +14,12 @@ if (config.module  !== "") {
 console.log('Module: ' + project);
 module.exports = {
     "id": project,
-    "viewports": [{
-    "label": "mobile",
-    "width": 300,
-    "height": 480
-    },
-    {
-        "label": "tablet",
-        "width": 700,
-        "height": 1024
-    },
-    {
-        "label": "ipad",
-        "width": 990,
-        "height": 1366
-    },
-    {
-        "label": "large screen",
-        "width": 1320,
-        "height": 1200
-    }],
+    "viewports": [
+        breakpoints.mobile,
+        breakpoints.tablet,
+        breakpoints.ipad,
+        breakpoints.desktop
+    ],
     "onBeforeScript": "puppet/onBefore.js",
     "onReadyScript": "puppet/onReady.js",
     "scenarios": scenarios,
