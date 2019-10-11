@@ -1,9 +1,10 @@
+const clc = require('cli-color');
 const fs = require('fs');
 let breakpoints = require('./backstopViewports-local');
 const scenariosSimilarLocal = require('./test-local/similar-local');
 const scenariosSeparateLocal = require('./test-local/separate-local');
 var scenarios = scenariosSeparateLocal.concat(scenariosSimilarLocal);
-let project = "Backstop-tools";
+let project = "Default";
 let configData = fs.readFileSync('./config.json');
 let config = JSON.parse(configData);
 if (config.module  !== "") {
@@ -11,7 +12,9 @@ if (config.module  !== "") {
     scenarios = scenariosExternal.concat(scenarios);
     project = config.module;
 }
-console.log('Module: ' + project);
+
+project  !== "Default" ? console.log('Module: ' + project) : console.log(clc.magentaBright.bold('Module: ' + clc.redBright.bold(project)));
+
 module.exports = {
     "id": project,
     "viewports": [
