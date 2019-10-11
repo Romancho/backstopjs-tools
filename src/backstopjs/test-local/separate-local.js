@@ -51,7 +51,7 @@ const authPop = {
 
 const scenarios = [
     social,
-    authPop
+    //authPop
 ];
 
 const basicTestSettings = {
