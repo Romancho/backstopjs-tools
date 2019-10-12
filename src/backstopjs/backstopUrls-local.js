@@ -10,7 +10,7 @@ const urlReference =  config.reference;
 const cookieFile = path.resolve(__dirname, './backstop_data/engine_scripts/cookies.json');
 
 if (config.module === "") {
-    console.info(clc.greenBright.blink.bold.bgBlack('Reference: ' + urlReference), clc.blueBright.blink.bgBlack('\n\rTesting: ' + urlTesting + '\n\r'));
+    console.info(clc.greenBright.bold.bgBlack('Reference: ' + urlReference), clc.blueBright.bgBlack('\n\rTesting: ' + urlTesting + '\n\r'));
 }
 const backstopPaths = [
     urlReference,

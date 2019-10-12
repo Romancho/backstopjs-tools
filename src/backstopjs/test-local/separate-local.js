@@ -50,7 +50,7 @@ const authPop = {
 };
 
 const scenarios = [
-    social,
+    //social,
     //authPop
 ];
 

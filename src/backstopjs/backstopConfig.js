@@ -13,7 +13,7 @@ if (config.module  !== "") {
     project = config.module;
 }
 
-project  !== "Default" ? console.log('Module: ' + project) : console.log(clc.magentaBright.bold('Module: ' + clc.redBright.bold(project)));
+project  !== "Default" ? console.log('Module: ' + project) : console.log(clc.magentaBright.bold('Module: ' + clc.redBright.blink.bold(project)));
 
 module.exports = {
     "id": project,
