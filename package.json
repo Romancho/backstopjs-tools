@@ -5,17 +5,17 @@
   "main": "index.js",
   "config": {
     "puppeteer_skip_chromium_download": true,
-    "BACKSTOP_DIR": "./src/backstopjs"
+    "backstopDir": "./src/backstopjs"
   },
-
   "scripts": {
-    "back_ref": "cross-env backstop reference --filter=$npm_config_filter --config=$npm_package_config_BACKSTOP_DIR/backstopConfig.js",
-    "back_test": "cross-env backstop test --filter=$npm_config_filter --config=$npm_package_config_BACKSTOP_DIR/backstopConfig.js ",
-    "back_approve": "cross-env backstop approve --filter=$npm_config_filter --config=$npm_package_config_BACKSTOP_DIR/backstopConfig.js"
+    "back_ref": "cross-env cross-var backstop reference --filter=$npm_config_filter --config=$npm_package_config_backstopDir/backstopConfig.js",
+    "back_test": "cross-env cross-var backstop test --filter=$npm_config_filter --config=$npm_package_config_backstopDir/backstopConfig.js ",
+    "back_approve": "cross-env cross-var backstop approve --filter=$npm_config_filter --config=$npm_package_config_backstopDir/backstopConfig.js"
   },
   "dependencies": {
     "cli-color": "^1.4.0",
     "cross-env": "^6.0.3",
+    "cross-var": "^1.1.0",
     "dotenv": "^8.1.0",
     "fs": "^0.0.1-security",
     "path": "^0.12.7"
