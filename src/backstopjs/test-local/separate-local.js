@@ -5,49 +5,7 @@ let breakpoints = require('../backstopViewports-local');
 
 const reference_exeption = require(path.resolve(__dirname, '../backstopExeption-local'));
 
-const social = {
-    'label': 'social',
-    'cookiePath': cookieFile,
-    'url': urlTesting + '/about',
-    'referenceUrl': urlReference + '/about',
-    'readyEvent': '',
-    'readySelector': '',
-    'delay': 1000,
-    'removeSelectors': [],
-    'hoverSelector': '',
-    'clickSelector': '',
-    'selectors' : [
-        '.subscriber'
-    ],
-    'hideSelectors': [],
-    'viewports': [
-        breakpoints.ipad,
-        breakpoints.desktop
-    ]
-};
 
-const authPop = {
-    'label': 'authPop',
-    'cookiePath': cookieFile,
-    'url': urlTesting,
-    'referenceUrl': urlReference,
-    'readyEvent': '',
-    'readySelector': '',
-    'delay': 3000,
-    'removeSelectors': [],
-    'hoverSelector': '',
-    'clickSelector': [
-        '.btn-menu'
-    ],
-    'selectors' : [
-        '.main-header'
-    ],
-    'hideSelectors': [],
-    'viewports': [
-        breakpoints.ipad,
-        breakpoints.desktop
-    ]
-};
 
 const scenarios = [
     //social,
