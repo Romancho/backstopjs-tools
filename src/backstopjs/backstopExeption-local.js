@@ -4,13 +4,13 @@ const path = require('path');
 
 let configData = fs.readFileSync(path.resolve(__dirname, '../../config.json'));
 let config = JSON.parse(configData);
-let moduleExeption;
+let moduleExeptions;
 
 if (config.module !== "") {
-    moduleExeption =  fs.readFileSync(path.resolve(__dirname, '../../node_modules/' + config.module + '/backstooExeption';
+    moduleExeptions =  fs.readFileSync(path.resolve(__dirname, '../../node_modules/' + config.module + '/backstopExeption.js'));
 }
 
 module.exports = [
-    moduleExeption,
+    moduleExeptions,
     ".disclamer"
 ];
