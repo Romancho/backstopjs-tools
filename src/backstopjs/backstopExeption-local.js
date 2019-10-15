@@ -1,5 +1,12 @@
 const path = require('path');
-const reference_exeption = require(path.resolve(__dirname, '../../node_modules/bs-ivd/backstopExeption'));
+let configData = fs.readFileSync(path.resolve(__dirname, '../../config.json'));
+let config = JSON.parse(configData);
+var reference_exeption;
+if (config.module  !== "") {
+    reference_exeption = require(path.resolve(__dirname, '../../node_modules/'+ config.module  +'/backstopExeption'));
+}
+
+
 module.exports = [
     reference_exeption,
     ".disclamer"
