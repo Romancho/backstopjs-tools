@@ -1,9 +1,21 @@
 [
   {
-    "domain": ".www.yourdomain.com",
+    "domain": "www.ivd.ru",
     "path": "/",
-    "name": "yourCookieName",
-    "value": "yourCookieValue",
+    "name": "_identity-frontend",
+    "value": "473e07d80820ca00680579e6f015e88d780b1820aa14cb2669a13428a9abec14a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A20%3A%22%5B18601%2Cnull%2C2592000%5D%22%3B%7D",
+    "expirationDate": 1798790400,
+    "hostOnly": false,
+    "httpOnly": false,
+    "secure": false,
+    "session": false,
+    "sameSite": "no_restriction"
+  },
+  {
+    "domain": "www.ivd.ru",
+    "path": "/",
+    "name": "_identity-frontend",
+    "value": "6e6862730a15ebc53f20e39c46a9d95b86b8a8fd2742a10e37871e3a1269a033a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A23%3A%22%5B90000000%2Cnull%2C2592000%5D%22%3B%7D",
     "expirationDate": 1798790400,
     "hostOnly": false,
     "httpOnly": false,

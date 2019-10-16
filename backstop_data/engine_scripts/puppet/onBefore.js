@@ -7,8 +7,8 @@ var clc = require("cli-color");
 module.exports = async (page, scenario, vp) => {
     //console.log(config.baseAuth);
     if(config.baseAuth === true) {
-        await page.authenticate({username: config.login, password: config.password});
-        //console.log(config.login, config.password);
+        await page.authenticate({username: config.baseLogin, password: config.basePassword});
+        //console.log(config.baseLogin, config.basePassword);
     }
 
     if(vp.label === "mobile") {
