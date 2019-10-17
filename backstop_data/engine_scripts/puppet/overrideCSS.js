@@ -11,5 +11,5 @@ module.exports = function (page, scenario) {
         document.head.appendChild(style);
     });
 
-    console.log('BACKSTOP_TEST_CSS_OVERRIDE injected for: ' + scenario.label);
+//    console.log('BACKSTOP_TEST_CSS_OVERRIDE injected for: ' + scenario.label);
 };
