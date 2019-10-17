@@ -13,7 +13,6 @@
     "back_approve": "cross-env cross-var backstop approve --filter=$npm_config_filter --config=$npm_package_config_backstopDir/backstopConfig.js"
   },
   "dependencies": {
-    "bs-ivd": "^2.1.2",
     "cli-color": "^1.4.0",
     "cross-env": "^6.0.3",
     "cross-var": "^1.1.0",
