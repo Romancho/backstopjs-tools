@@ -3,6 +3,6 @@
   "reference":            "https://yandex.ru",
   "testing":              "https://yandex.ru",
   "baseAuth":              false,
-  "login":                "test",
-  "password":             "test"
+  "baseLogin":            "test",
+  "basePassword":         "test"
 }
