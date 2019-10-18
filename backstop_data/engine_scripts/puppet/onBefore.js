@@ -5,6 +5,7 @@ let config = JSON.parse(configData);
 var clc = require("cli-color");
 
 module.exports = async (page, scenario, vp) => {
+
     //console.log(config.baseAuth);
     if(config.baseAuth === true) {
         await page.authenticate({username: config.baseLogin, password: config.basePassword});
@@ -42,6 +43,7 @@ module.exports = async (page, scenario, vp) => {
             request.continue();
         }
     });
+
     await page.setRequestInterception(true);
     await require('./loadCookies')(page, scenario);
     await page.setDefaultNavigationTimeout(300000);

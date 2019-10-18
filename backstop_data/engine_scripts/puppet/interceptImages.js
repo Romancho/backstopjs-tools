@@ -22,6 +22,7 @@ const HEADERS_STUB = {};
 
 module.exports = async function (page, scenario) {
   const intercept = async (request, targetUrl) => {
+
     if (IMAGE_URL_RE.test(request.url())) {
       await request.respond({
         body: IMAGE_DATA_BUFFER,
