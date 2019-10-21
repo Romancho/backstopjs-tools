@@ -9,3 +9,11 @@ vendor
 node_modules
 /npm-debug.log
 config.json
+
+.DS_Store
+Desktop.ini
+Thumbs.db
+.Spotlight-V100
+.Trashes
+*.pyc
+*.out
