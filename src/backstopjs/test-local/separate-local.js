@@ -5,31 +5,25 @@ let breakpoints = require('../backstopViewports-local');
 
 const reference_exeption = require(path.resolve(__dirname, '../backstopExeption-local'));
 
-// Пример локального сценария
-
-// const social = {                                       // Правим название константы (должно быть уникально)
-//     'label': 'social',                                 // Правим название сценария (используется в консоли как --filter=social)
+// const random = {
+//     'label': 'random',
 //     'cookiePath': cookieFile,
-//     'referenceUrl': urlReference + '/about',           // Добавляем урл нужной страницы, которую скриним
-//     'url': urlTesting + '/about',                      // Дублируем урл нужной страницы, которую тестим
+//     'url': urlTesting + '/krasota/587592-kak-uhazhivat-za-soboj-doma-chtoby-rezhe-hodit-v-salon-krasoty/',
+//     'referenceUrl': urlReference + '/krasota/587592-kak-uhazhivat-za-soboj-doma-chtoby-rezhe-hodit-v-salon-krasoty/',
 //     'readyEvent': '',
 //     'readySelector': '',
 //     'delay': 1000,
-//     'removeSelectors': [],                             // Тут селектор в виде '.selector', которые исключаем (при использовании bs-конфига есть предопределeнный набор reference_exeption)
-//     'hoverSelector': '',                               // Тут селектор в виде '.selector', если на него надо навести
-//     'clickSelector': '',                               // Тут селектор в виде '.selector', если на него надо кликнуть
-//     'selectors' : [
-//         '.subscriber'                                  // Тут селектор в виде '.selector', какой мы проверяем
+//     'removeSelectors': [
+//         reference_exeption
 //     ],
-//     'hideSelectors': [],
-//     'viewports': [                                    // Брейкпоинты, если нужно проверять только в определенном разрешении
-//         breakpoints.ipad,
-//         breakpoints.desktop
-//     ]
+//     'hoverSelector': '',
+//     'clickSelector': '',
+//     'selectors' : ['.layout'],
+//     'hideSelectors': []
 // };
 
 const scenarios = [
-    //social,                                            // Вызов константы
+    //random
 ];
 
 const basicTestSettings = {
