@@ -5,33 +5,31 @@ let breakpoints = require('../backstopViewports-local');
 
 const reference_exeption = require(path.resolve(__dirname, '../backstopExeption-local'));
 
-// const mobileDropMenu = {
-//     'label': 'mobileDropMenu',
+// const comments = {
+//     'label': 'comments',
 //     'cookiePath': cookieFile,
-//     'url': urlTesting,
-//     'referenceUrl': urlReference,
+//     'url': urlTesting + '/scaffolding/comments',
+//     'referenceUrl': urlReference + '/scaffolding/comments',
 //     'readyEvent': '',
 //     'readySelector': '',
 //     'delay': 3000,
 //     'removeSelectors': [
 //         '.disclamer',
+//         '.main-footer',
+//         '.main-header',
 //         reference_exeption
 //     ],
 //     'hoverSelector': '',
-//     'clickSelector': [
-//         '.btn-menu-mobile'
-//     ],
+//     'clickSelector': [],
 //     'selectors' : [
-//         'body'
+//         '.scaffoldings_item'
 //     ],
 //     'hideSelectors': [],
-//     'viewports': [
-//         breakpoints.mobile
-//     ]
+//     'viewports': []
 // };
 
 const scenarios = [
-    //random
+    //comments
 ];
 
 const basicTestSettings = {
