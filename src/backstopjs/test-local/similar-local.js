@@ -2,15 +2,24 @@ const path = require('path');
 const urls = require(path.resolve(__dirname, '../backstopUrls-local'));
 let breakpoints = require('../backstopViewports-local');
 let [urlReference, urlTesting, cookieFile] = urls;
-const reference_exeption = require(path.resolve(__dirname, '../backstopExeption-local'));
+const reference_exeption = require(path.resolve(__dirname, '../backstopException-local'));
 
 // Fixtures
-var fixturesSampleText = [];
-let fixturesSample = require('../backstopFixtures-local.json');
-fixturesSampleText = JSON.parse(JSON.stringify(fixturesSample));
-let fixtureDefault = fixturesSampleText.local["0"];
+let fixturesSample = require(path.resolve(__dirname, '../backstopFixtures'));
+let fixtureDefault = fixturesSample.local["1"];
 
 const social = {};
+
+// const abs =  {
+//     'label': 'abs',
+//     'removeSelectors': [
+//     ],
+//     'selectors' : [
+//         '.main-navigation'
+//     ],
+//     'fixturesSelector': '.top-menu .swiper-slide a',
+//     'fixturesValue': fixtureDefault
+// };
 
 const basicTestSettings = {
     referenceUrl: urlReference,
@@ -31,8 +40,8 @@ const basicTestSettings = {
 
 
 const scenarios = [
-    testHeader,
-    testFooter
+    //social
+    // abs
 ];
 
 function addBasicTestSettings(scenarios) {

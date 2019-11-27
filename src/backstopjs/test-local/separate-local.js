@@ -3,13 +3,11 @@ const urls = require(path.resolve(__dirname, '../backstopUrls-local'));
 let [urlReference, urlTesting, cookieFile] = urls;
 let breakpoints = require('../backstopViewports-local');
 
-const reference_exeption = require(path.resolve(__dirname, '../backstopExeption-local'));
+const reference_exeption = require(path.resolve(__dirname, '../backstopException-local'));
 
 // Fixtures
-var fixturesSampleText = [];
-let fixturesSample = require('../backstopFixtures-local.json');
-fixturesSampleText = JSON.parse(JSON.stringify(fixturesSample));
-let fixtureDefault = fixturesSampleText.local["0"];
+let fixturesSample = require(path.resolve(__dirname, '../backstopFixtures'));
+let fixtureDefault = fixturesSample.local["1"];
 
 // Пример локального сценария
 
