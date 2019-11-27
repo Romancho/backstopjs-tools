@@ -1,9 +1,4 @@
-module.exports = async (page) => {
-    const myLocalValue = "Test";
-    const tweets = await page.$$('.menu__link');
-
-
-    for (const tweet of tweets) {
-        await page.$eval(tweet, (el, value) => el.innerHTML = value, myLocalValue)
-    }
+module.exports = async (page, scenario, vp) => {
+    const myLocalValue = "6 нарядных платьев, которые ты будешь носить и после новогодней вечеринки ";
+    await page.$$eval('.details_item a', (links, value) => links.forEach(el => el.innerHTML = value), myLocalValue);
 };
