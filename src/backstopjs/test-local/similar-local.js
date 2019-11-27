@@ -4,7 +4,27 @@ let breakpoints = require('../backstopViewports-local');
 let [urlReference, urlTesting, cookieFile] = urls;
 const reference_exeption = require(path.resolve(__dirname, '../backstopExeption-local'));
 
+/*
+const testHeader =  {
+    'label': 'testHeader',
+    'removeSelectors': [
+        reference_exeption
+    ],
+    'selectors' : [
+        'header'
+    ],
+};
 
+const testFooter =  {
+    'label': 'testFooter',
+    'removeSelectors': [
+        reference_exeption
+    ],
+    'selectors' : [
+        'footer'
+    ],
+};
+*/
 
 const basicTestSettings = {
     referenceUrl: urlReference,
@@ -25,7 +45,8 @@ const basicTestSettings = {
 
 
 const scenarios = [
-
+    testHeader,
+    testFooter
 ];
 
 function addBasicTestSettings(scenarios) {
