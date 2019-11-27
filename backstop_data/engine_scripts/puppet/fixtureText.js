@@ -1,4 +1,7 @@
 module.exports = async (page, scenario, vp) => {
-    const myLocalValue = "Test text";
-    await page.$$eval('.details_item a', (links, value) => links.forEach(el => el.innerHTML = value), myLocalValue);
+    if(scenario.fixturesSelector && scenario.fixturesInnerValue) {
+        const fixturesInnerValue = scenario.fixturesInnerValue;
+        const fixturesInnerSelector = scenario.fixturesSelector;
+        await page.$$eval(fixturesInnerSelector, (links, value) => links.forEach(el => el.innerHTML = value), fixturesInnerValue);
+    }
 };

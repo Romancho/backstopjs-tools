@@ -4,27 +4,13 @@ let breakpoints = require('../backstopViewports-local');
 let [urlReference, urlTesting, cookieFile] = urls;
 const reference_exeption = require(path.resolve(__dirname, '../backstopExeption-local'));
 
-/*
-const testHeader =  {
-    'label': 'testHeader',
-    'removeSelectors': [
-        reference_exeption
-    ],
-    'selectors' : [
-        'header'
-    ],
-};
+// Fixtures
+var fixturesSampleText = [];
+let fixturesSample = require('../backstopFixtures-local.json');
+fixturesSampleText = JSON.parse(JSON.stringify(fixturesSample));
+let fixtureDefault = fixturesSampleText.local["0"];
 
-const testFooter =  {
-    'label': 'testFooter',
-    'removeSelectors': [
-        reference_exeption
-    ],
-    'selectors' : [
-        'footer'
-    ],
-};
-*/
+const social = {};
 
 const basicTestSettings = {
     referenceUrl: urlReference,

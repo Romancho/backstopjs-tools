@@ -5,8 +5,16 @@ let breakpoints = require('../backstopViewports-local');
 
 const reference_exeption = require(path.resolve(__dirname, '../backstopExeption-local'));
 
-// const comments = {
-//     'label': 'comments',
+// Fixtures
+var fixturesSampleText = [];
+let fixturesSample = require('../backstopFixtures-local.json');
+fixturesSampleText = JSON.parse(JSON.stringify(fixturesSample));
+let fixtureDefault = fixturesSampleText.local["0"];
+
+// Пример локального сценария
+
+// const social = {                                       // Правим название константы (должно быть уникально)
+//     'label': 'social',                                 // Правим название сценария (используется в консоли как --filter=social)
 //     'cookiePath': cookieFile,
 //     'url': urlTesting + '/scaffolding/comments',
 //     'referenceUrl': urlReference + '/scaffolding/comments',
