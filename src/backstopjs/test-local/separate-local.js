@@ -3,10 +3,16 @@ const urls = require(path.resolve(__dirname, '../backstopUrls-local'));
 let [urlReference, urlTesting, cookieFile] = urls;
 let breakpoints = require('../backstopViewports-local');
 
-const reference_exeption = require(path.resolve(__dirname, '../backstopExeption-local'));
+const reference_exeption = require(path.resolve(__dirname, '../backstopException-local'));
 
-// const comments = {
-//     'label': 'comments',
+// Fixtures
+let fixturesSample = require(path.resolve(__dirname, '../backstopFixtures'));
+let fixtureDefault = fixturesSample.local["1"];
+
+// Пример локального сценария
+
+// const social = {                                       // Правим название константы (должно быть уникально)
+//     'label': 'social',                                 // Правим название сценария (используется в консоли как --filter=social)
 //     'cookiePath': cookieFile,
 //     'url': urlTesting + '/scaffolding/comments',
 //     'referenceUrl': urlReference + '/scaffolding/comments',
