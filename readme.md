@@ -18,22 +18,30 @@ $ npm config set unsafe-perm true
 $ npm install -g backstopjs
 ```
 2. В корне проекта выполняем:
+
 ```bash
 $ npm i
 ```
 
-3. Скопировать переменные `BACKSTOP_*` из *.env.default* в *.env* и проставить свои значения:
-```
-BACKSTOP_DEBUG = true # переменная только для работы BackstopJS (например скрывает баннеры)
-```
-
 3. Конфиги
 Предустановленные конфиги лежат в **частном (закрытом)** репозитории, в котором **необходимо авторизоваться** через консоль.
-
-Далее копируем test.config.json в config.json, вносим значения и делаем:
+Если используем предустановленные конфиги, то:
 
 ```bash
 $ npm i bs-название проекта
+```
+
+Далее копируем test.config.json в config.json, вносим значения и делаем:
+
+```json
+  "module":               "название пакета, если нет, то оставляем пустое",
+  "reference":            "урл сайта-референса",
+  "testing":              "урл тестируемого сайта",
+  "baseAuth":             true|false, //Если нужно проходить базовую авторизацию на сервере, то true
+  "baseLogin":            "dev", 
+  "basePassword":         "developer",
+  "site_user":            "email@email.com", //пока не используется
+  "site_password":        "111111" //пока не используется
 ```
 
 
@@ -72,7 +80,11 @@ $ npm run back_test --filter=scenario_name
 ```bash
 $ npm run back_approve --filter=scenario_name
 ```
-*На данный момент можно передавать только одно название сценария*
+*Если нужно запустить несколько сценариев, то через запятую без пробела*
+
+```bash
+$ npm run back_test --filter=scenario_name_1,scenario_name_2,scenario_name_35
+```
 
 -----------------------------------------------------
 ## Troubleshooting
