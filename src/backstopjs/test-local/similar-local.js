@@ -2,7 +2,7 @@ const path = require('path');
 const urls = require(path.resolve(__dirname, '../backstopUrls-local'));
 let breakpoints = require('../backstopViewports-local');
 let [urlReference, urlTesting, cookieFile] = urls;
-const reference_exeption = require(path.resolve(__dirname, '../backstopException-local'));
+const reference_exception = require(path.resolve(__dirname, '../backstopException-local'));
 
 // Fixtures
 let fixturesSample = require(path.resolve(__dirname, '../backstopFixtures'));

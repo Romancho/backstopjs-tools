@@ -3,7 +3,7 @@ const urls = require(path.resolve(__dirname, '../backstopUrls-local'));
 let [urlReference, urlTesting, cookieFile] = urls;
 let breakpoints = require('../backstopViewports-local');
 
-const reference_exeption = require(path.resolve(__dirname, '../backstopException-local'));
+const reference_exception = require(path.resolve(__dirname, '../backstopException-local'));
 
 // Fixtures
 let fixturesSample = require(path.resolve(__dirname, '../backstopFixtures'));
@@ -23,7 +23,7 @@ let fixtureDefault = fixturesSample.local["1"];
 //         '.disclamer',
 //         '.main-footer',
 //         '.main-header',
-//         reference_exeption
+//         reference_exception
 //     ],
 //     'hoverSelector': '',
 //     'clickSelector': [],
