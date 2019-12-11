@@ -19,6 +19,7 @@ module.exports = {
     "id": project,
     "viewports": [
         breakpoints.mobile,
+        breakpoints.smartphone,
         breakpoints.tablet,
         breakpoints.ipad,
         breakpoints.desktop

@@ -14,7 +14,11 @@ module.exports = async (page, scenario, vp) => {
 
     if(vp.label === "mobile") {
         page.setUserAgent('Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) CriOS/68.0.3440.83 Mobile/15F79 Safari/604.1');
-        console.log(clc.magentaBright("iPhone6 emulated"));
+        console.log(clc.magentaBright("Mobile emulated"));
+    }
+    if(vp.label === "smartphone") {
+        page.setUserAgent('Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) CriOS/68.0.3440.83 Mobile/15F79 Safari/604.1');
+        console.log(clc.magentaBright("XScreen mobile emulated"));
     }
 
     var hostFile = fs.readFileSync(path.resolve(__dirname, '../../../hosts.txt'), 'utf8').split('\n');
@@ -29,7 +33,6 @@ module.exports = async (page, scenario, vp) => {
 //When loading a page I then filter out requests for these domains (and optionally images):
 
     page.on('request', request => {
-
         var domain = null;
         var frags = request.url().split('/');
         if (frags.length > 2) {

@@ -4,6 +4,12 @@ const mobile_ranges = {
     "height": 480
 };
 
+const smartphone_ranges = {
+    "label": "smartphone",
+    "width": 414,
+    "height": 736
+};
+
 const tablet_ranges = {
     "label": "tablet",
     "width": 700,
@@ -22,15 +28,16 @@ const desktop_ranges = {
     "height": 1200
 };
 const ranges = [
-    mobile_ranges, tablet_ranges, ipad_ranges, desktop_ranges
+    mobile_ranges, smartphone_ranges, tablet_ranges, ipad_ranges, desktop_ranges
 ];
 
 // Пока так оставил. Потом пройдемся.
 const breakpoints = {
     "mobile": ranges[0],
-    "tablet": ranges[1],
-    "ipad": ranges[2],
-    "desktop": ranges[3]
+    "smartphone": ranges[1],
+    "tablet": ranges[2],
+    "ipad": ranges[3],
+    "desktop": ranges[4]
 };
 
 module.exports =  breakpoints;
