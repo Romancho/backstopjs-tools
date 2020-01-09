@@ -42,12 +42,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/bearshit/backstop-test.git"
+    "url": "пше+https://github.com/Romancho/backstopjs-tools"
   },
   "author": "R.Zhukov",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://gitlab.com/bearshit/backstop-test/issues"
+    "url": "https://github.com/Romancho/backstopjs-tools/issues"
   },
-  "homepage": "https://gitlab.com/bearshit/backstop-test#README"
+  "homepage": "https://github.com/Romancho/backstopjs-tools#README"
 }
