@@ -42,7 +42,7 @@ const basicTestSettings = {
     postInteractionWait: 3000,
     selectorExpansion: true,
     expect: 0,
-    misMatchThreshold: 0.9,
+    misMatchThreshold: 0.1,
     requireSameDimensions: true
 };
 
