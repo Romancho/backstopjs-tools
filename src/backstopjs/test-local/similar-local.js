@@ -10,16 +10,16 @@ let fixtureDefault = fixturesSample.local["1"];
 
 const social = {};
 
-const header =  {
-    'label': 'header',
-    'removeSelectors': [
-    ],
-    'selectors' : [
-        'header'
-    ],
-    //'fixturesSelector': '.top-menu .swiper-slide a',
-    //'fixturesValue': fixtureDefault
-};
+// const header =  {
+//     'label': 'header',
+//     'removeSelectors': [
+//     ],
+//     'selectors' : [
+//         'header'
+//     ],
+//     //'fixturesSelector': '.top-menu .swiper-slide a',
+//     //'fixturesValue': fixtureDefault
+// };
 
 const basicTestSettings = {
     referenceUrl: urlReference,
@@ -40,7 +40,7 @@ const basicTestSettings = {
 
 
 const scenarios = [
-    header
+    //header
     //social
     // abs
 ];
