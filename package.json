@@ -1,7 +1,7 @@
 {
   "name": "backstopjs",
   "version": "1.0.0",
-  "description": "",
+  "description": "BackstopJs-base application for express deployment",
   "main": "index.js",
   "config": {
     "puppeteer_skip_chromium_download": true,
