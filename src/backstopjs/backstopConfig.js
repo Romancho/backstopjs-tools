@@ -5,7 +5,7 @@ const scenariosSimilarLocal = require('./test-local/similar-local');
 const scenariosSeparateLocal = require('./test-local/separate-local');
 var scenarios = scenariosSeparateLocal.concat(scenariosSimilarLocal);
 let project = "Default";
-let configData = fs.readFileSync('./config.json');
+let configData = fs.readFileSync('./bs-config.json');
 let config = JSON.parse(configData);
 if (config.module  !== "") {
     let scenariosExternal = require(config.module);

@@ -1,8 +1,0 @@
-{
-  "module":               "",
-  "reference":            "https://yandex.ru",
-  "testing":              "https://yandex.ru",
-  "baseAuth":              false,
-  "baseLogin":            "test",
-  "basePassword":         "test"
-}
