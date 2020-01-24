@@ -2,7 +2,7 @@ const clc = require("cli-color");
 const fs = require('fs');
 const path = require('path');
 
-let configData = fs.readFileSync(path.resolve(__dirname, '../../config.json'));
+let configData = fs.readFileSync(path.resolve(__dirname, '../../bs-config.json'));
 let config = JSON.parse(configData);
 
 const urlTesting = config.testing;
