@@ -9,6 +9,7 @@ vendor
 node_modules
 /npm-debug.log
 config.json
+bs-config.json
 
 .DS_Store
 Desktop.ini

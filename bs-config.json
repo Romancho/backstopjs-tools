@@ -1,8 +1,0 @@
-{
-  "module":               "bs-lisa",
-  "reference":     	  "https://lisa.ru",
-  "testing":              "http://lisa.rposlovin.verstak7.burdadigital.guru",
-  "baseAuth":              true,
-  "baseLogin":                "dev",
-  "basePassword":             "developer"
-}
