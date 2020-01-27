@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-let configData = fs.readFileSync(path.resolve(__dirname, '../../../config.json'));
+let configData = fs.readFileSync(path.resolve(__dirname, '../../../bs-config.json'));
 let config = JSON.parse(configData);
 var clc = require("cli-color");
 
