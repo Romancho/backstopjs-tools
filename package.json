@@ -1,6 +1,6 @@
 {
   "name": "backstopjs",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "BackstopJs-base application for express deployment",
   "main": "index.js",
   "config": {
@@ -13,7 +13,6 @@
     "back_approve": "cross-env cross-var backstop approve --filter=$npm_config_filter --config=$npm_package_config_backstopDir/backstopConfig.js"
   },
   "dependencies": {
-    "bs-lisa": "^2.2.21",
     "cli-color": "^1.4.0",
     "cross-env": "^6.0.3",
     "cross-var": "^1.1.0",
