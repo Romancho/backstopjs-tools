@@ -29,7 +29,7 @@ $ npm i
 ```
 3.Далее копируем test.config.json в config.json, вносим значения и делаем:
 ```bash
-$ cp test.config.json config.json
+$ cp test.bs-config.json config.json
 $ nano config.json
 ```
 
@@ -38,8 +38,8 @@ $ nano config.json
   "reference":            "урл сайта-референса",
   "testing":              "урл тестируемого сайта",
   "baseAuth":             true|false, //Если нужно проходить базовую авторизацию на сервере, то true
-  "baseLogin":            "dev", 
-  "basePassword":         "developer",
+  "baseLogin":            "test", 
+  "basePassword":         "test",
   "site_user":            "email@email.com", //пока не используется
   "site_password":        "111111" //пока не используется
 ```
