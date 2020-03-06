@@ -13,8 +13,6 @@
     "back_approve": "cross-env cross-var backstop approve --filter=$npm_config_filter --config=$npm_package_config_backstopDir/backstopConfig.js"
   },
   "dependencies": {
-    "bs-lisa": "^2.2.21",
-    "cli-color": "^1.4.0",
     "cross-env": "^6.0.3",
     "cross-var": "^1.1.0",
     "dotenv": "^8.1.0",
@@ -26,7 +24,8 @@
     "@babel/preset-env": "^7.0.0-beta.42",
     "autoprefixer": "^7.1.6",
     "babel-core": "^6.26.0",
-    "browserify": "^16.2.2"
+    "browserify": "^16.2.2",
+    "cli-color": "^1.4.0"
   },
   "babel": {
     "presets": [
