@@ -22,7 +22,7 @@ module.exports = function (page, scenario) {
     page.evaluate(() => {
         var style = document.createElement('style');
         style.type = 'text/css';
-        var styleNode = document.createTextNode(window._styleData);Task: #
+        var styleNode = document.createTextNode(window._styleData);
         style.appendChild(styleNode);
         document.head.appendChild(style);
     });
