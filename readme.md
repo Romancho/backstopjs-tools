@@ -29,8 +29,8 @@ $ npm i
 ```
 3.Далее копируем test.config.json в config.json, вносим значения и делаем:
 ```bash
-$ cp test.config.json config.json
-$ nano config.json
+$ cp test.config.json bs-config.json
+$ nano bs-config.json
 ```
 
 ```json
