@@ -8,7 +8,7 @@ let config = JSON.parse(configData);
 let BACKSTOP_TEST_CSS_OVERRIDE = '';
 
 if (config.module.length > 0) {
-    BACKSTOP_TEST_CSS_OVERRIDE = require('../../../node_modules/bs-playboy/tests/overrideCss.js');
+    BACKSTOP_TEST_CSS_OVERRIDE = require('../../../node_modules/'+ config.module +'/tests/overrideCss.js');
     if (BACKSTOP_TEST_CSS_OVERRIDE === undefined) {
         console.log(clc.pink('NO CSS OVERRIDE FILE'));
     }
